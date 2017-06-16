@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		html, body, .layout {
+			height: 100%;
+			min-width: 100%;	
+		}	
+		.layout {
+		  display: grid;
+		  grid-template-columns: 1fr;
+		  grid-template-rows: 100px 1fr 100px;
+		  grid-template-areas: 
+		  	"header header header header header"
+		  	"main main main main main"
+		  	"footer footer footer footer footer";
+		}
+		.main {
+			grid-area: main;
+			background: blue;
+		}
+		.header {
+			grid-area: header;
+			background: black;
+			display: grid;
+			grid-template-columns: 1fr;
+		    grid-template-rows: 44px 1fr;
+		    grid-template-areas: 
+			  	"header__contacts";
+		}
+		.header__contacts {
+			grid-area: header__contacts;
+			background: white;	
+			display: flex;
+			justify-content: space-between;
+		}
+		.footer {
+			grid-area: footer;
+			background: coral;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<header class="header">
+			<div class="header__contacts">
+				<div>11</div>
+				<div>22</div>
+			</div>
+		</header>
+		<main class="main">
+			22222
+		</main>	
+		<footer class="footer">
+			44444
+		</footer>
+	</div>
+</body>
+</html>
